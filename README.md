@@ -11,3 +11,7 @@
 ## Python
 
 - [import](./Python/python_import.md)
+
+## Ubuntu
+
+- [카카오톡](./Ubuntu/ubuntu_kakaotalk.md)
