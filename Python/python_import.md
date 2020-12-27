@@ -4,6 +4,9 @@
 > - 패키지
 > - sys.path, PYTHONPATH
 
+- [Python Module and Packages](https://jun-choi-4928.medium.com/python-module-and-packages-afc6a7d870b)
+- [sys.path, PYTHONPATH: 파이썬 파일 탐색 경로](https://www.bangseongbeom.com/sys-path-pythonpath.html)
+
 ## 모듈
 ### 모듈 (module)
 

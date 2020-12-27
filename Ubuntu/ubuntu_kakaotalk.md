@@ -4,6 +4,9 @@
 > - 카카오톡 설치
 > - 결론
 
+- [우분투 20.04 신 버전 카카오톡 설치하기 - XP버전 막히고 이후](https://tolovefeels.tistory.com/65)
+- [우분투 카카오톡 설치](https://hiseon.me/linux/ubuntu/ubuntu-kakaotalk/)
+
 ## wine, PlayOnLinux
 ### 리눅스에서 윈도우 프로그램 사용하기
 
