@@ -53,6 +53,9 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 ~~~Bash
 rbenv install -l  # 설치 가능한 버전 목록
 rbenv install [version]  # [version]의 루비 설치하기
+rbenv rehash  # 새로운 환경 재설정
+rbenv global [version]  # [version]의 루비를 전역 설정
+ruby -v  # 루비 버젼 확인
 ~~~
 
 ## IDE / 코드 에디터
