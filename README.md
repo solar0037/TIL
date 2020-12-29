@@ -11,6 +11,9 @@
 - 디렉터리: CamelCase
 - 파일 이름: [디렉터리 이름]_example.md
 
+## FP (Functional Programming)
+- [파이썬](./FP/fp_python.md)
+
 ## Python
 
 - [import](./Python/python_import.md)
