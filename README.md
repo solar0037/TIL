@@ -12,6 +12,7 @@
 - 파일 이름: [디렉터리 이름]_example.md
 
 ## FP (Functional Programming)
+
 - [파이썬](./FP/fp_python.md)
 
 ## Python
@@ -26,9 +27,9 @@
 
 - [TensorFlow Transform](./TFX/tfx_tensorflow_transform)
 
-## Ubuntu
+## Linux
 
-- [카카오톡](./Ubuntu/ubuntu_kakaotalk.md)
+- [PlayOnLinux](./Linux/linux_playonlinux.md)
 
 ## Windows
 

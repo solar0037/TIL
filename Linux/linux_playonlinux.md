@@ -1,4 +1,4 @@
-# 카카오톡
+# PlayOnLinux
 
 > - wine, PlayOnLinux
 > - 카카오톡 설치
@@ -24,7 +24,7 @@
 - wine-stable, cabextract 사용해 설치
 - '알 수 없는 오류' 띄우며 강제종료, 해결 불가
 
-### PlayOnLinux 통해 설치하기
+### PlayOnLinux 통해 설치하기 (우분투 기준)
 
 - https://tolovefeels.tistory.com/65 참고
 - https://hiseon.me/linux/ubuntu/ubuntu-kakaotalk/ 아이콘을 시스템 트레이에 정리
