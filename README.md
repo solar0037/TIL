@@ -25,7 +25,7 @@
 
 ## TFX
 
-- [TensorFlow Transform](./TFX/tfx_tensorflow_transform)
+- [TensorFlow Transform](./TFX/tfx_tft)
 
 ## Linux
 

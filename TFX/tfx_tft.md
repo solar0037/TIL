@@ -4,6 +4,7 @@
 > - VSCode?
 
 - [TensorFlow Transform 시작하기](https://www.tensorflow.org/tfx/transform/get_started)
+- [TensorFlow Transform으로 데이터 전처리](https://www.tensorflow.org/tfx/tutorials/transform/simple)
 - [TensorFlow Extended (TFX) (TensorFlow Dev Summit 2018)](https://www.youtube.com/watch?v=vdG7uKQ2eKk&feature=youtu.be&t=199)
 
 ## 개요
