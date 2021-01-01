@@ -25,6 +25,7 @@
 
 ## TFX
 
+- [TensorFlow Data Validation](./TFX/tfx_tfdv)
 - [TensorFlow Transform](./TFX/tfx_tft)
 
 ## Linux
