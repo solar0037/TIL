@@ -5,6 +5,7 @@
 - 말투는 편하게 놓습니다. (불편하면? 뒤로가기)
 - 적당한 분량으로 쓰고, 출처를 밝힙니다.
 - 때로는 지식 정리와 함께 삽질 후기, 배운 점 등이 들어갈 수 있습니다.
+- 예제는 간단한 코드 스니펫에 불과하기 때문에 돌아가지 않을 수 있습니다. 대신에 기억나지 않을 때 찾는 용도로 사용합니다.
 
 ## 이름 규칙
 
@@ -27,6 +28,7 @@
 
 - [TensorFlow Data Validation](./TFX/tfx_tfdv.md)
 - [TensorFlow Transform](./TFX/tfx_tft.md)
+- [TensorFlow Serving](./TFX/tfx_tf_serving.md)
 
 ## Linux
 
