@@ -23,6 +23,7 @@
 ### 개요
 - TFX 컴포넌트들을 쉽게 orchestration할 수 있는 프레임워크
 - ExampleGen, SchemaGen, Transform, Trainer, Pusher 등 pipeline으로 합치기 (orchestration)
+- 2021.1.3 현재: tfx 0.25.0 - google-api-core에서 grpcio 관련 이슈, requirements에 google-api-core==1.16.0 추가 (또는 grpcio==1.29.0 추가)
 
 ### 템플릿
 - 미리 정의된 템플릿 사용 (penguin, taxi)
