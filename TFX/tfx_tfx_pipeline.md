@@ -3,6 +3,9 @@
 > - MLOps
 > - TFX Pipeline
 
+- [TFX 파이프라인 이해](https://www.tensorflow.org/tfx/guide/understanding_tfx_pipelines)
+- [TFX 파이프라인 구축](https://www.tensorflow.org/tfx/guide/build_tfx_pipeline?hl=en#build_a_pipeline_using_a_template)
+
 ## MLOps
 ### 머신러닝 모델 프로덕션으로 옮기기
 - 데이터 준비
