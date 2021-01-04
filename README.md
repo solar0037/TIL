@@ -26,10 +26,11 @@
 
 ## TFX
 
+- [Apache Airflow](./TFX/tfx_apache_airflow.md)
+- [TFX Pipeline](./TFX/tfx_tfx_pipeline.md)
 - [TensorFlow Data Validation](./TFX/tfx_tfdv.md)
 - [TensorFlow Transform](./TFX/tfx_tft.md)
 - [TensorFlow Serving](./TFX/tfx_tf_serving.md)
-- [TFX Pipeline](./TFX/tfx_tfx_pipeline.md)
 
 ## Linux
 
