@@ -28,6 +28,10 @@
 
 - [설치](./Ruby/ruby_install.md)
 
+## Language
+
+- [인터프리터](./Language/interpreter.md)
+
 ## TFX
 
 - [Apache Airflow](./TFX/tfx_apache_airflow.md)
