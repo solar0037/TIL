@@ -40,6 +40,10 @@
 - [TensorFlow Transform](./TFX/tfx_tft.md)
 - [TensorFlow Serving](./TFX/tfx_tf_serving.md)
 
+## React
+
+- [i18next](./React/react_i18next.md)
+
 ## Linux
 
 - [PlayOnLinux](./Linux/linux_playonlinux.md)
