@@ -43,6 +43,7 @@
 ## React
 
 - [i18next](./React/react_i18next.md)
+- [react-router](./React/react_router.md)
 
 ## Linux
 
