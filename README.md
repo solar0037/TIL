@@ -52,6 +52,7 @@
 ## Linux
 
 - [PlayOnLinux](./Linux/linux_playonlinux.md)
+- [SSH](./Linux/ssh.md)
 
 ## Windows
 
