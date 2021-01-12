@@ -58,6 +58,10 @@
 
 - [윈도우 파티션](./Windows/windows_partition.md)
 
+## Cloud
+
+- [AWS SageMaker](./Cloud/aws_sagemaker.md)
+
 ## Vim
 
 - [Vundle](./Vim/vim_vundle.md)
