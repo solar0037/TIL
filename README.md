@@ -40,6 +40,10 @@
 - [TensorFlow Transform](./TFX/tfx_tft.md)
 - [TensorFlow Serving](./TFX/tfx_tf_serving.md)
 
+## Django
+
+- [프로젝트 구조](./Django/project_structure.md)
+
 ## React
 
 - [i18next](./React/react_i18next.md)
