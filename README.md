@@ -9,8 +9,8 @@
 
 ## 이름 규칙
 
-- 디렉터리: CamelCase
-- 파일 이름: [디렉터리 이름]_example.md
+- 디렉터리: DirectoryName
+- 파일 이름: file_name.md
 
 ## FP (Functional Programming)
 
@@ -22,11 +22,11 @@
 
 ## Python
 
-- [import](./Python/python_import.md)
+- [import](./Python/import.md)
 
 ## Ruby
 
-- [설치](./Ruby/ruby_install.md)
+- [설치](./Ruby/install.md)
 
 ## Language
 
@@ -34,11 +34,11 @@
 
 ## TFX
 
-- [Apache Airflow](./TFX/tfx_apache_airflow.md)
-- [TFX Pipeline](./TFX/tfx_tfx_pipeline.md)
-- [TensorFlow Data Validation](./TFX/tfx_tfdv.md)
-- [TensorFlow Transform](./TFX/tfx_tft.md)
-- [TensorFlow Serving](./TFX/tfx_tf_serving.md)
+- [Apache Airflow](./TFX/apache_airflow.md)
+- [TFX Pipeline](./TFX/tfx_pipeline.md)
+- [TensorFlow Data Validation](./TFX/tfdv.md)
+- [TensorFlow Transform](./TFX/tft.md)
+- [TensorFlow Serving](./TFX/tf_serving.md)
 
 ## Django
 
@@ -51,11 +51,11 @@
 
 ## DVC
 
-- [개념](./DVC/dvc_concept.md)
+- [개념](./DVC/concept.md)
 
 ## Linux
 
-- [PlayOnLinux](./Linux/linux_playonlinux.md)
+- [PlayOnLinux](./Linux/playonlinux.md)
 - [SSH](./Linux/ssh.md)
 
 ## Windows
@@ -68,4 +68,4 @@
 
 ## Vim
 
-- [Vundle](./Vim/vim_vundle.md)
+- [Vundle](./Vim/vundle.md)
