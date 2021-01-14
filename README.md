@@ -57,6 +57,7 @@
 
 - [PlayOnLinux](./Linux/playonlinux.md)
 - [SSH](./Linux/ssh.md)
+- [셔뱅](./Linux/shebang.md)
 
 ## Windows
 
