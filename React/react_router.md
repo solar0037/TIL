@@ -3,8 +3,11 @@
 > - 개요
 > - 설치
 > - 사용
+> - 라우팅 장소
 
 - [react-router :: 1장. 리액트 라우터 사용해보기](https://velopert.com/3417)
+- [React-router urls don't work when refreshing or writing manually](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually)
+- [Deployment | Create React App](https://create-react-app.dev/docs/deployment/#notes-on-client-side-routing)
 
 ## 개요
 
@@ -109,4 +112,20 @@ export default Category;
 
 - ``<Link to="">``를 통해 다른 페이지로 이동할 링크 제공 가능
 
-- 이슈: /resume로 접속하였을 때 404 발생. 해결할 방법은 없을까?
+- 이슈: /resume로 접속하였을 때 404 발생. 해결할 방법은 없을까? -> 라우팅 개념 이해 필요
+
+## 라우팅 장소
+
+- server-side routing: 서버로 요청을 보내면 URL을 분석해 서버가 파일을 돌려줌
+- client-side routing
+  1. 처음에 react, react-router 등 스크립트를 로딩 (초기 한 번의 server-side routing)
+  2. 다른 페이지로 가는 링크를 누르면 로컬(client)에서만 URL을 바꿈 (요청 발생 X)
+- 따라서 처음에는 client쪽에 스크립트가 없기 때문에 404(페이지 없음)가 발생하게 된다.
+
+### 해결법
+
+- GitHub Pages를 사용중인 경우
+- HTML5의 pushState 히스토리 API를 사용하는 라우터를 지원하지 X (browserHistory 등)
+- GitHub Pages는 리액트 내부의 라우팅 코드에 대해 모르기 때문
+1. hashHistory 사용
+2. 404.html을 추가해 index.html로 리다이렉션
