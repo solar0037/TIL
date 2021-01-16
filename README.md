@@ -43,6 +43,7 @@
 ## Django
 
 - [프로젝트 구조](./Django/project_structure.md)
+- [프로덕션](./Django/production.md)
 
 ## React
 
