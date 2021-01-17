@@ -2,6 +2,7 @@
 
 > - 구조
 > - uWSGI
+> - Nginx
 
 - [Setting up Django and your web server with uWSGI and nginx](https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
 
@@ -34,3 +35,26 @@ $ uwsgi --http :8000 --module mysite.wsgi
 ```
 
 - Django 애플리케이션을 --module 플래그를 통해 서빙 (mysite/wsgi.py -> mysite.wsgi)
+
+## Nginx
+
+- Nginx: 웹서버 역할
+
+### 설치
+
+```Bash
+$ sudo apt install nginx
+```
+
+### 실행
+
+```Bash
+$ sudo /etc/init.d/nginx start
+```
+
+- start 외에도 stop, restart, reload, force-reload, status 등 가능
+
+### 프로젝트 설정
+
+- [uwsgi_params](https://github.com/nginx/nginx/blob/master/conf/uwsgi_params)를 프로젝트에 둬야 함
+- 맨 위의 링크를 참조해 /etc/nginx/sites-available/mysite.conf 파일 생성, /etc/nginx/sites-enabled/에 심볼릭 링크 생성 (nginx가 참조할 수 있게)
