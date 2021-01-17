@@ -6,63 +6,70 @@
 - 적당한 분량으로 쓰고, 출처를 밝힙니다.
 - 때로는 지식 정리와 함께 삽질 후기, 배운 점 등이 들어갈 수 있습니다.
 - 예제는 간단한 코드 스니펫에 불과하기 때문에 돌아가지 않을 수 있습니다. 대신에 기억나지 않을 때 찾는 용도로 사용합니다.
+- 쓰다 보니까 꽤 분량이 많아지네요..? `<C-C> <C-v>`로 만든 지식 정리밖에 안 된다는 건가...
 
 ## 이름 규칙
 
 - 디렉터리: DirectoryName
 - 파일 이름: file_name.md
 
-## FP (Functional Programming)
+## Design Pattern
 
-- [파이썬](./FP/fp_python.md)
+- FP (Functional Programming)
 
-## OOP (Object Oriented Programming)
+  - [파이썬](./DesignPattern/FP/fp_python.md)
 
-- [파이썬](./OOP/oop_python.md)
+- OOP (Object Oriented Programming)
 
-## Python
-
-- [import](./Python/import.md)
-
-## Ruby
-
-- [설치](./Ruby/install.md)
+  - [파이썬](./DesignPattern/OOP/oop_python.md)
 
 ## Language
 
+- Python
+
+  - [import](./Language/Python/import.md)
+
+- Ruby
+
+  - [설치](./Language/Ruby/install.md)
+
 - [인터프리터](./Language/interpreter.md)
 
-## TFX
+## Library / Framework
 
-- [Apache Airflow](./TFX/apache_airflow.md)
-- [TFX Pipeline](./TFX/tfx_pipeline.md)
-- [TensorFlow Data Validation](./TFX/tfdv.md)
-- [TensorFlow Transform](./TFX/tft.md)
-- [TensorFlow Serving](./TFX/tf_serving.md)
+- TFX
 
-## Django
+  - [Apache Airflow](./LibFwk/TFX/apache_airflow.md)
+  - [TFX Pipeline](./LibFwk/TFX/tfx_pipeline.md)
+  - [TensorFlow Data Validation](./LibFwk/TFX/tfdv.md)
+  - [TensorFlow Transform](./LibFwk/TFX/tft.md)
+  - [TensorFlow Serving](./LibFwk/TFX/tf_serving.md)
 
-- [프로젝트 구조](./Django/project_structure.md)
-- [프로덕션](./Django/production.md)
+- Django
 
-## React
+  - [프로젝트 구조](./LibFwk/Django/project_structure.md)
+  - [프로덕션](./LibFwk/Django/production.md)
 
-- [i18next](./React/react_i18next.md)
-- [react-router](./React/react_router.md)
+- React
+
+  - [i18next](./LibFwk/React/react_i18next.md)
+  - [react-router](./LibFwk/React/react_router.md)
 
 ## DVC
 
 - [개념](./DVC/concept.md)
 
-## Linux
+## OS
 
-- [PlayOnLinux](./Linux/playonlinux.md)
-- [SSH](./Linux/ssh.md)
-- [셔뱅](./Linux/shebang.md)
+- Linux
 
-## Windows
+  - [PlayOnLinux](./OS/Linux/playonlinux.md)
+  - [SSH](./OS/Linux/ssh.md)
+  - [셔뱅](./OS/Linux/shebang.md)
 
-- [윈도우 파티션](./Windows/windows_partition.md)
+- Windows
+
+  - [윈도우 파티션](./OS/Windows/windows_partition.md)
 
 ## Cloud
 
