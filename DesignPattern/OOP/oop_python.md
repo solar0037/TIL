@@ -1,14 +1,21 @@
 # 객체지향형 프로그래밍
 
 > - 객체지향형 프로그래밍
+>   - OOP의 특징
 > - class, ``__init__``, ``__del__``
-> - getter, setter
+> - 접근 제한자
+>   - Name Mangling
+>   - getter, setter
+>   - @property
 > - classmethod, staticmethod
+>   - classmethod
+>   - staticmethod
 > - 추상클래스
 
 - [객체 지향 프로그래밍(OOP) 개념](https://victorydntmd.tistory.com/117)
 - [Python 밑줄 문자와 던더 (name mangling)](https://blog.naver.com/reisei11/221749496623)
 - [44. class 정리 - 정적메소드 @classmethod와 @staticmethod의 정리](https://wikidocs.net/16074)
+- [Python @property 사용하기](https://medium.com/@hckcksrl/python-property-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-89eb0f0e2e56)
 
 ## 객체지향형 프로그래밍
 
@@ -46,30 +53,13 @@ p.say()  # My name is James, and I am 18 years old.
 del p  # James dies at age 18.
 ~~~
 
-## getter, setter
+## 접근 제한자
 
 - 외부에서 객체의 정보에 접근하는 것을 신중하게
-- 파이썬에는 private 제한자가 없기 때문에 강제되지는 않음
-- _method 형태로 쓰면 내부용으로 쓰일 것이라는 표시 (protected?)
+- 파이썬에는 protected, private 제한자가 없기 때문에 강제되지는 않음
+- _method 형태로 쓰면 내부용으로 쓰일 것이라는 표시 (protected)
 - __method 형태로 쓰면 (강한) 접근하지 말라는 표시 (private), name mangling
 
-~~~Python
-class Account:
-    def __init__(self, id_, password):
-        self.id_ = id_
-        self.password = password
-    
-    def get_password(self):
-        encrypted = "*" * len(self.password)
-        return encrypted
-    
-    def set_password(self, password):
-        self.password = password
-
-acc = Account(21, "1234asdf")
-print(acc.get_password())  # ********
-acc.set_password("12345678")
-~~~
 
 ### Name Mangling
 
@@ -90,7 +80,7 @@ print(Lock().__key)
 ~~~
 
 ~~~Python
-class AnotherLock(Lock):
+class NewLock(Lock):
     def __init__(self):
         self.__key = "overriden"
 
@@ -99,6 +89,91 @@ print(dir(Lock()))
 print(AnotherLock().__key)
 # AttributeError  # __key는 애초에 name mangling되어 존재하지도 않음
 ~~~
+
+### getter, setter
+
+- 외부에서 직접 속성을 편집하는 것을 막기
+- _name이나 __name 형태로 정의하고 getter, setter로 대체
+
+~~~Python
+class Account:
+    def __init__(self, name):
+        self._name = name
+    
+    def get_name(self):
+        return self._name
+    
+    def set_name(self, name):
+        self._name = name
+
+acc = Account("John Doe")
+print(acc.get_name())  # John Doe
+acc.set_name("John Smith")
+~~~
+
+### @property
+
+- getter, setter를 설정하는 것은 번거롭고 코드가 더러워짐
+- class property(fget=None, fset=None, fdel=None, doc=None) - get, set 함수를 설정해 property 속성을 반환
+- instance_name.property 형태로 접근해도 속성을 직접 편집하지 않고 getter, setter가 호출되게 할 수 있음
+- getter가 None인 경우 - AttributeError: 'ClassName' object has no attribute 'name' - 속성 이름이 _name이면 애초에 객체에 name 속성이 없음!
+- setter가 None인 경우 - AttributeError: can't set attribute
+
+property() 사용
+
+```Python
+class Person:
+    def __init__(self):
+        self._name = None
+    
+    def get_name(self):
+        return self._name
+
+    def set_name(self, value):
+        self._name = value
+    
+    def del_name(self, value):
+        del self._name
+    
+    name = property(get_name, set_name, del_name, "The person's name.")
+
+p = Person()
+p.name = "John Doe"  # setter
+print(p.name)  # getter
+del p.name  # deleter
+```
+
+- property 객체를 통해 get, set, delete를 외부에서 더 자연스럽게 사용할 수 있음
+
+@property 사용
+
+```Python
+class Person:
+    def __init__(self):
+        self._name = None
+    
+    @property
+    def name(self):
+        """The person's name."""
+        return self._name
+    
+    @name.setter
+    def name(self, value):
+        self._name = value
+    
+    @name.deleter
+    def name(self):
+        del self._name
+
+p = Person()
+p.name = "John Doe"  # setter
+print(p.name)  # getter
+del p.name  # deleter
+```
+
+- 데코레이터를 사용해 위와 똑같은 코드 구현
+- 데코레이터를 사용한 함수의 이름은 property의 이름과 같아야 한다.
+- 의문점: @property를 사용해 getter를 구현했는데 왜 @name.getter가 자동완성에 잡히지? 더 알아봐야겠다.
 
 ## classmethod, staticmethod
 
