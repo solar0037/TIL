@@ -48,6 +48,7 @@
 - Django
 
   - [프로젝트 구조](./LibFwk/Django/project_structure.md)
+  - [라우팅](./LibFwk/Django/routing.md)
   - [프로덕션](./LibFwk/Django/production.md)
 
 - React
