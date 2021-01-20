@@ -18,6 +18,7 @@
 - FP (Functional Programming)
 
   - [파이썬](./DesignPattern/FP/fp_python.md)
+  - [자바스크립트](./DesignPattern/FP/fp_javascript.md)
 
 - OOP (Object Oriented Programming)
 
