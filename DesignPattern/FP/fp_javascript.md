@@ -31,7 +31,6 @@ arr.reduce(f(acc, x))
 ```JavaScript
 const reducer = (acc, x) => acc + x;
 console.log([1, 2, 3].reduce(reducer));  // 6
-// console.log([1, 2, 3].reduce((acc, x) => acc + x));
 ```
 
 - 리듀서(reducer) 함수의 반환값: 누산기(acc)에 누적
@@ -40,7 +39,6 @@ console.log([1, 2, 3].reduce(reducer));  // 6
 ### filter()
 
 ```JavaScript
-// arr.filter(callback(element[, index[, array]])[, thisArg])
 arr.filter(f(x))
 ```
 - 배열에서 함수에 맞는 것만 골라 새로운 배열 반환
