@@ -13,16 +13,16 @@
 - 디렉터리: DirectoryName
 - 파일 이름: file_name.md
 
-## Design Pattern
+## Programming Paradigm
 
 - FP (Functional Programming)
 
-  - [파이썬](./DesignPattern/FP/fp_python.md)
-  - [자바스크립트](./DesignPattern/FP/fp_javascript.md)
+  - [파이썬](./Paradigm/FP/fp_python.md)
+  - [자바스크립트](./Paradigm/FP/fp_javascript.md)
 
 - OOP (Object Oriented Programming)
 
-  - [파이썬](./DesignPattern/OOP/oop_python.md)
+  - [파이썬](./Paradigm/OOP/oop_python.md)
 
 ## Language
 
