@@ -24,6 +24,10 @@
 
   - [파이썬](./Paradigm/OOP/oop_python.md)
 
+## Design Pattern
+
+- [MVC](./DesignPattern/MVC.md)
+
 ## Language
 
 - Python
