@@ -2,9 +2,9 @@
 
 > - 디자인 패턴
 > - MVC
->   - M(odel)
->   - V(iew)
->   - C(ontroller)
+>   - Model
+>   - View
+>   - Controller
 
 - [소프트웨어 디자인 패턴](https://ko.wikipedia.org/wiki/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4)
 - [MVC 디자인 패턴](https://opentutorials.org/course/697/3828)
