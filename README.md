@@ -27,6 +27,7 @@
 ## Design Pattern
 
 - [MVC](./DesignPattern/MVC.md)
+- [싱글턴](./DesignPattern/singleton.md)
 
 ## Language
 
