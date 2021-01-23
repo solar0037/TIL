@@ -88,4 +88,4 @@
 
 - Vim
 
-  - [Vundle](./Editor/Vim/vundle.md)
+  - [플러그인](./Editor/Vim/plugin.md)
