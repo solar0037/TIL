@@ -1,5 +1,7 @@
 # TIL (Today I Learned)
 
+이곳의 글은 [깃허브 페이지](https://solar0037.github.io/TIL)에 올라갑니다!
+
 - 배운 것을 정리하는 레포입니다. 명령어를 다시 찾아보는 시간을 줄이기 위해서이기도 합니다.
 - 이론적인 내용/프로그램 설치/각종 팁 등 개발 관련된 것이라면 대부분 가능합니다.
 - 말투는 편하게 놓습니다. (불편하면? 뒤로가기)
@@ -38,6 +40,7 @@
 - Ruby
 
   - [설치](./Language/Ruby/install.md)
+  - [Bundler](./Language/Ruby/bundler.md)
 
 - [인터프리터](./Language/interpreter.md)
 
