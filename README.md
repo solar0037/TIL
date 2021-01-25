@@ -75,6 +75,7 @@
 
 - Linux
 
+  - [Arch Linux](./OS/Linux/arch_linux.md)
   - [PlayOnLinux](./OS/Linux/playonlinux.md)
   - [SSH](./OS/Linux/ssh.md)
   - [셔뱅](./OS/Linux/shebang.md)
