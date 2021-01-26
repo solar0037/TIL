@@ -3,7 +3,11 @@
 > - 아치 리눅스
 > - 설치
 > - 패키지 관리자
+>   - AUR
+>   - debtap
 > - 느낀 점
+
+- [.deb 파일 아치 리눅스에 설치하기](https://blog.beom.dev/posts/install-dep-on-arch/)
 
 ## 아치 리눅스
 
@@ -22,6 +26,31 @@
 - pacman 이용
 - `pacman -S [패키지]` - 설치
 - `pacman -R [패키지]` - 삭제
+
+### AUR
+
+- [Arch User Repository](https://aur.archlinux.org/)
+- 유저가 직접 올린 패키지가 있는 저장소
+- yaourt, yay 등의 AUR 헬퍼 사용해 설치
+- 바이러스 조심!
+
+### debtap
+
+- .deb 패키지를 Arch Linux에 설치할 수 있게 해주는 도구
+
+```Bash
+$ yay debtap
+```
+
+- yay를 이용해 debtap 설치
+
+```Bash
+$ debtap [package].deb
+$ sudo pacman -S [package].pkg
+```
+
+- debtap을 이용해 .deb 패키지를 .pkg로 변환
+- pacman으로 .pkg 패키지 설치
 
 ## 느낀 점
 
