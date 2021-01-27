@@ -4,11 +4,18 @@
 >   - map()
 >   - reduce()
 >   - filter()
+> - 화살표 함수
+> - currying
+
+- [Functional Programming in Javascript](https://dev-momo.tistory.com/entry/Functional-Programming-in-Javascript)
+- [람다, 익명 함수, 클로저](https://hyunseob.github.io/2016/09/17/lambda-anonymous-function-closure/)
+- [함수형 프로그래밍의 Currying](https://velog.io/@kmp1007s/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-Currying)
 
 ## 배열 내장 함수
 
 - 자바스크립트의 배열에 내장되어 있는 함수를 이용해 함수형 프로그래밍 실현
 - 원본 배열을 수정하지 않고(부작용 X) 새로운 값을 만들어 사용한다.
+- ES6에 추가된 문법들로 함수형 프로그래밍 실현 가능
 
 ### map()
 
@@ -45,4 +52,35 @@ arr.filter(f(x))
 
 ```JavaScript
 console.log([1, 2, 3, 4, 5, 6].filter((x) => x % 2 === 0))  // [ 2, 4, 6 ]
+```
+
+## 화살표 함수
+
+- 함수의 작성을 더 간단하게
+- 인수 한 개 -> 괄호 생략 가능
+- 즉시 반환 -> 괄호 & return 생략 가능
+
+```JavaScript
+const arr = ["John Doe", "Guido Van Rossum", "Linus Torvalds"];
+console.log(arr.map(function(s) { return s.length }));
+console.log(arr.map(s => s.length));
+```
+
+## currying
+
+- 여러 개의 인자를 받는 함수를 f(1, 2)
+- 단일 인자를 받는 함수의 체인으로 f(1)(2)
+
+```JavaScript
+function f(x) {
+  return function(y) {
+    return x + y;
+  };
+};
+// const f = (x) => {
+//   return (y) => {
+//     return x + y;
+//   };
+// };
+console.log(f(1)(2));
 ```
