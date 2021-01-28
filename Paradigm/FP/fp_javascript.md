@@ -6,6 +6,7 @@
 >   - filter()
 > - 화살표 함수
 > - currying
+> - 재귀함수
 
 - [Functional Programming in Javascript](https://dev-momo.tistory.com/entry/Functional-Programming-in-Javascript)
 - [람다, 익명 함수, 클로저](https://hyunseob.github.io/2016/09/17/lambda-anonymous-function-closure/)
@@ -83,4 +84,17 @@ function f(x) {
 //   };
 // };
 console.log(f(1)(2));
+```
+
+## 재귀함수
+
+- 함수 내에서 자기 자신을 호출하는 함수
+- 자바스크립트는 [꼬리 재귀 최적화](https://velog.io/@yesdoing/%EA%BC%AC%EB%A6%AC-%EB%AC%BC%EA%B8%B0-%EC%B5%9C%EC%A0%81%ED%99%94Tail-Call-Optimization%EB%9E%80-2yjnslo7sr)를 제공
+
+```JavaScript
+function fact(n) {
+  if (n == 1) return 1;
+  else return n * fact(n - 1);
+}
+console.log(fact(5));  // 120
 ```

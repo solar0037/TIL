@@ -2,9 +2,12 @@
 
 > - 함수형 프로그래밍
 > - map, reduce, filter
+>   - map
+>   - reduce
+>   - filter
 > - lambda
 > - 재귀함수
-> - 꼬리재귀
+>   - 꼬리재귀
 > - Iterator
 > - Generator
 
@@ -82,7 +85,7 @@ arr = [1, 2, 3, 4, 5]
 print(list(map(lambda x: x * 2, arr)))  # [2, 4, 6, 8, 10]
 ~~~
 
-### 재귀함수
+## 재귀함수
 
 - 함수 내에서 자기 자신을 호출하는 함수
 - 무한 재귀에 빠지지 않게 주의
@@ -126,7 +129,7 @@ def fact(n, acc=1):
     return fact(n - 1, n * acc)
 ~~~
 
-### Iterator
+## Iterator
 
 - iter(iterable[, sentinel]) -> iterator
 - list 등의 iterable 객체를 받아 iterator 생성
@@ -144,7 +147,7 @@ print(next(it))  # 3
 print(next(it))  # Exception: StopIteration
 ~~~
 
-### Generator
+## Generator
 
 - yield 키워드를 사용하는 특별한 형태의 함수
 - iterator를 더 쉽게 작성할 수 있음
