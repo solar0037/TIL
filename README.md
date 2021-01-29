@@ -45,6 +45,7 @@
 - Go
 
   - [모듈](./Language/Go/module.md)
+  - [고루틴](./Language/Go/goroutine.md)
 
 - [인터프리터](./Language/interpreter.md)
 
