@@ -84,6 +84,7 @@
   - [PlayOnLinux](./OS/Linux/playonlinux.md)
   - [SSH](./OS/Linux/ssh.md)
   - [셔뱅](./OS/Linux/shebang.md)
+  - [시작 스크립트](./OS/Linux/startup_script.md)
 
 - Windows
 
