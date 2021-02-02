@@ -3,7 +3,11 @@
 > - 개요
 > - 접속 형태
 > - Key Pair
+>   - 키페어 생성하기
 > - 기타
+>   - termux
+
+- [SSH Key - 비밀번호 없이 로그인](https://opentutorials.org/module/432/3742)
 
 ## 개요
 
@@ -24,6 +28,28 @@
 - 암호화 알고리즘을 rsa 등 선택 가능
 - Linux/macOS: ssh-keygen
 - Windows: PuTTYGen
+
+### 키페어 생성하기
+
+- 클라이언트
+
+```Bash
+$ ssh-keygen -t rsa  # id_rsa, id_rsa.pub 생성
+$ scp id_rsa.pub [user]@[ip address]:id_rsa.pub  # id_rsa.pub을 원격지에 복사
+
+$ chmod 700 ~/.ssh
+$ chmod 600 ~/.ssh/id_rsa
+$ chmod 644 ~/.ssh/id_rsa.pub  # 원격지 authorized_keys에 넣는 것 이외에는 필요 없는 파일인 듯?
+$ chmod 644 ~/.ssh/known_hosts
+```
+
+- 서버
+
+```Bash
+$ cat id_rsa.pub >> ~/.ssh/authorized_keys  # id_rsa.pub 대신에 authorized_keys에 있어야 함
+$ chmod 700 ~/.ssh
+$ chmod 644 ~/.ssh/authorized_keys
+```
 
 ## 기타
 

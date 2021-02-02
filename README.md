@@ -45,6 +45,7 @@
 - Go
 
   - [모듈](./Language/Go/module.md)
+  - [고루틴](./Language/Go/goroutine.md)
 
 - [인터프리터](./Language/interpreter.md)
 
@@ -75,6 +76,10 @@
 
   - [개녕](./VCS/DVC/concept.md)
 
+## DevOps
+
+- [docker-compose](./DevOps/docker_compose.md)
+
 ## OS
 
 - Linux
@@ -83,6 +88,7 @@
   - [PlayOnLinux](./OS/Linux/playonlinux.md)
   - [SSH](./OS/Linux/ssh.md)
   - [셔뱅](./OS/Linux/shebang.md)
+  - [시작 스크립트](./OS/Linux/startup_script.md)
 
 - Windows
 
