@@ -70,6 +70,10 @@
   - [i18next](./LibFwk/React/react_i18next.md)
   - [react-router](./LibFwk/React/react_router.md)
 
+- Flutter
+
+  - [UI](./LibFwk/Flutter/ui.md)
+
 ## VCS
 
 - DVC
