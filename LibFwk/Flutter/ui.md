@@ -2,6 +2,7 @@
 
 - [Introduction to Widgets](https://flutter-ko.dev/docs/development/ui/widgets-intro)
 - [Flutter 레이아웃](https://flutter-ko.dev/docs/development/ui/layout)
+- [Flutter: ListView & GridView](https://medium.com/flutterfly-tech/flutter-listview-gridview-ce7177812b1d)
 
 > - 위젯
 >   - Text
@@ -9,6 +10,8 @@
 >   - Container
 >   - Row, Column
 >     - 정렬하기
+>   - ListView
+>   - GridView
 
 ## 위젯
 
@@ -75,3 +78,48 @@ Widget _buildTextContainer() => Container(
 - `crossAxisAlignment`: 횡축 정렬 설정
   - `CrossAxisAlignment.baseline`, `center`, `end`, `start`, `stretch`, ...
 - 주의: `mainAxisAlignment`와 `crossAxisAligment`에 사용할 수 있는 값들이 약간 다르다. 왜 그런지는 아직 잘 모르겠다.
+
+### ListView
+
+- children 안의 것들을 리스트 형태로 보여주기
+- `children` 프로퍼티: `List<Widget>` 타입 (`ListTitle`, `Container`, ...)
+
+```Dart
+Widget _buildList() => ListView(
+  children: <Widget>[
+    ListTile(
+      leading: FlutterLogo(),  // 타일 맨 앞
+      trailing: Icon(Icons.more_vert),  // 타일 맨 뒤
+      title: Text('One-line with leading & trailing widget'),
+    ),
+    ListTile(
+      leading: FlutterLogo(),
+      trailing: Icon(Icons.more_vert),
+      title: Text('Hello Flutter again!'),
+    ),
+    ListTile(
+      leading: FlutterLogo(),
+      trailing: Icon(Icons.more_vert),
+      title: Text('Hello Flutter again again!'),
+    ),
+  ],
+);
+```
+
+### GridView
+
+- `children` 안의 것들을 그리드 형태로 보여주기
+- `GridView.extent`: 크기 기준
+- `GridView.count`: 개수 기준
+
+```Dart
+Widget _buildGrid() => GridView.count(
+  crossAxisCount: 5,  // 가로줄에 최대 5개
+  // 50개의 Container(Card()) 생성
+  children: List.generate(50, (index) => Container(
+    child: Card(
+      color: Colors.teal,
+    ),
+  )),
+);
+```
