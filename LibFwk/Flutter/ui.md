@@ -3,6 +3,7 @@
 - [Introduction to Widgets](https://flutter-ko.dev/docs/development/ui/widgets-intro)
 - [Flutter 레이아웃](https://flutter-ko.dev/docs/development/ui/layout)
 - [Flutter: ListView & GridView](https://medium.com/flutterfly-tech/flutter-listview-gridview-ce7177812b1d)
+- [Adding interactivity to your Flutter app](https://flutter-ko.dev/docs/development/ui/interactive)
 
 > - 위젯
 >   - Text
@@ -12,6 +13,11 @@
 >     - 정렬하기
 >   - ListView
 >   - GridView
+> - StatelessWidget vs StatefulWidget
+> - 상태 관리의 주체
+>   - 스스로 관리
+>   - 부모가 관리
+>   - 섞어 사용
 
 ## 위젯
 
@@ -123,3 +129,138 @@ Widget _buildGrid() => GridView.count(
   )),
 );
 ```
+
+## StatelessWidget vs StatefulWidget
+
+- `StatelessWidget`: 상태가 없는 위젯. 단순한 아이콘, 배경사진 등
+- `StatefulWidget`: 상태가 있는 위젯. 사용자의 입력, 데이터, 또는 애니메이션을 통해 변함.
+
+## 상태 관리의 주체
+
+### 스스로 관리
+
+- 위젯이 상태 변화에 대한 콜백함수를 내장
+- 외부에서 상태를 변화시킬 필요가 없음
+- 예: `ListView`의 스크롤 함수
+
+main.dart
+
+```Dart
+Scaffold(
+  child: TapboxA(),  // 인자 없이 사용
+)
+```
+
+TapboxA.dart
+
+```Dart
+class TapboxA extends StatefulWidget {
+  TapboxA({Key key}) : super(key: key);
+
+  @override
+  _TapboxAState createState() => _TapboxAState();
+}
+
+class _TapboxAState extends State<TapboxA> {
+  bool _active = false;  // 상태: _active (bool)
+
+  void _handleTap() {  // 탭 동작을 관리하는 함수
+    setState(() {  // 직접 변경하면 아무것도 일어나지 않음
+      _active = !_active;
+    });
+  }
+
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _handleTap,  // _handleTap() 함수로 GestureDetector 위젯 생성
+      child: Container(
+        child: Center(
+          child: Text(
+            _active ? 'Active' : 'Inactive',  // _active에 따라 변하는 부분
+            style: TextStyle(fontSize: 32.0, color: Colors.white),
+          ),
+        ),
+        width: 200.0,
+        height: 200.0,
+        decoration: BoxDecoration(
+          color: _active ? Colors.lightGreen[700] : Colors.grey[600],  // _active에 따라 변하는 부분
+        ),
+      ),
+    );
+  }
+}
+```
+
+### 부모가 관리
+
+- 부모는 `StatefulWidget`, 자식은 `StatelessWidget`이 됨
+- 적절한 콜백 함수를 인자로 넘겨주기
+
+ParentWidget.dart
+
+```Dart
+class ParentWidget extends StatefulWidget {
+  @override
+  _ParentWidgetState createState() => _ParentWidgetState();
+}
+
+class _ParentWidgetState extends State<ParentWidget> {
+  bool _active = false;
+
+  void _handleTapboxChanged(bool newValue) {  // _active를 설정하는 콜백 함수
+    setState(() {
+      _active = newValue;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: TapboxB(
+        active: _active,  // 자식 위젯으로 상태 넘겨주기
+        onChanged: _handleTapboxChanged,  // onChanged 인자로 콜백함수 넘겨주기
+      ),
+    );
+  }
+}
+```
+
+TapboxB.dart
+
+```Dart
+class TapboxB extends StatelessWidget {  // onChanged 함수를 통해 구현하기
+  TapboxB({Key key, this.active: false, @required this.onChanged})
+      : super(key: key);
+
+  final bool active;  // 상태
+  final ValueChanged<bool> onChanged;  // 콜백함수
+
+  void _handleTap() {  // 생성자로 주어진 onChanged 콜백함수를 이용해 active 상태 조절
+    onChanged(!active);
+  }
+
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _handleTap,
+      child: Container(
+        child: Center(
+          child: Text(
+            active ? 'Active' : 'Inactive',  // active에 따라 변하는 부분
+            style: TextStyle(fontSize: 32.0, color: Colors.white),
+          ),
+        ),
+        width: 200.0,
+        height: 200.0,
+        decoration: BoxDecoration(
+          color: active ? Colors.lightGreen[700] : Colors.grey[600],  // active에 따라 변하는 부분
+        ),
+      ),
+    );
+  }
+}
+```
+
+### 섞어 사용
+
+- 융통성 있게 관리!
+- 사실 위의 것도 이해가 잘 안 가서 다음에 정리해야겠다
