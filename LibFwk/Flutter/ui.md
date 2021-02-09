@@ -4,6 +4,7 @@
 - [Flutter 레이아웃](https://flutter-ko.dev/docs/development/ui/layout)
 - [Flutter: ListView & GridView](https://medium.com/flutterfly-tech/flutter-listview-gridview-ce7177812b1d)
 - [Adding interactivity to your Flutter app](https://flutter-ko.dev/docs/development/ui/interactive)
+- [새로운 화면으로 이동하고, 되돌아오기](https://flutter-ko.dev/docs/cookbook/navigation/navigation-basics)
 
 > - 위젯
 >   - Text
@@ -18,6 +19,7 @@
 >   - 스스로 관리
 >   - 부모가 관리
 >   - 섞어 사용
+> - 화면 전환
 
 ## 위젯
 
@@ -264,3 +266,33 @@ class TapboxB extends StatelessWidget {  // onChanged 함수를 통해 구현하
 
 - 융통성 있게 관리!
 - 사실 위의 것도 이해가 잘 안 가서 다음에 정리해야겠다
+
+## 화면 전환
+
+- `Navigator` 클래스를 이용해 화면 전환
+- `Widget build()` 함수에서 `BuildContext context` 객체를 이용해 현재의 문맥?을 판단하는 듯 (화면 전환 시 왼쪽 위에 돌아가기 화살표가 뜬다)
+
+MainRoute.dart
+
+```Dart
+ElevatedButton(
+  child: Text('Open Route'),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SubRoute()),
+    );
+  },
+)
+```
+
+SubRoute.dart
+
+```Dart
+ElevatedButton(
+  child: Text('Go back!'),
+  onPressed: () {
+    Navigator.pop(context);
+  },
+)
+```
