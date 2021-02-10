@@ -20,6 +20,10 @@
 >   - 부모가 관리
 >   - 섞어 사용
 > - 화면 전환
+>   - Named route
+>   - Named route로 인자 넘기기
+>     - 위젯에서 인자를 추출하기
+>     - onGenerateRoute를 이용해 인자 추출하기
 
 ## 위젯
 
@@ -295,4 +299,151 @@ ElevatedButton(
     Navigator.pop(context);
   },
 )
+```
+
+### Named route
+
+main.dart
+
+```Dart
+MaterialApp(
+  title: 'Navigation Basics',
+  initialRoute: '/',  // initialRoute를 사용하면 home은 설정 X
+  routes: {
+    '/': (context) => FirstScreen(),
+    '/second': (context) => SecondScreen(),
+  },
+)
+```
+
+routes.dart
+
+```Dart
+onPressed: () {
+  Navigator.pushNamed(context, '/second');  // Navigator.pop()은 동일
+}
+```
+
+### Named route로 인자 넘기기
+
+- 인자 정의(공통)
+
+```Dart
+class ScreenArguments {
+  final String title;
+  final String message;
+
+  ScreenArguments(this.title, this.message);
+}
+```
+
+#### 위젯에서 인자를 추출하기
+
+- 인자를 추출하는 위젯 만들기
+
+```Dart
+...
+final ScreenArguments args = ModalRoute.of(context).settings.arguments;
+
+return Scaffold(
+  appBar: AppBar(
+    title: Text(args.title),
+  ),
+  body: Center(
+    child: Text(args.message),
+  ),
+);
+```
+
+- 위젯 등록하기
+
+```Dart
+MaterialApp(
+  routes: {
+    // /extractArguments: (context) => ExtractArgumentsScreen()
+    ExtractArgumentsScreen.routeName: (context) => ExtractArgumentsScreen(),
+  },     
+);
+```
+
+- 위젯으로 이동하기
+
+```Dart
+// 인자를 RouteSettings의 일부로 넘김
+Navigator.pushNamed(
+  context,
+  ExtractArgumentsScreen.routeName,  // /extractArguments
+  arguments: ScreenArguments(  // 위젯에서 파싱할 인자
+    'Extract Arguments Screen',
+    'This message is extracted in the build method.',
+  ),
+);
+```
+
+#### onGenerateRoute를 이용해 인자 추출하기
+
+- 생성자를 통해 인자를 전달받는 위젯 만들기
+
+```Dart
+class PassArgumentsScreen extends StatelessWidget {
+  static const routeName = '/passArguments';
+
+  final String title;
+  final String message;
+
+  // onGenerateRoute 함수에서 추출된 인자들이 사용됨
+  const PassArgumentsScreen({
+    Key key,
+    @required this.title,
+    @required this.message,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: Text(message),
+      ),
+    );
+  }
+}
+```
+
+- onGenerateRoute 함수를 통해 인자 추출하기
+
+```Dart
+MaterialApp(
+  // named route를 처리할 함수
+  onGenerateRoute: (settings) {
+    // /passArguments 라우트를 푸시할 때만 정의. 그런데 이렇게 하면 반환값이 없다고 IDE가 화내서 else에 기본값을 적어 주었다(??)
+    if (settings.name == PassArgumentsScreen.routeName) {  // /passArguments
+      // args: {title, message}
+      final ScreenArguments args = settings.arguments;
+
+      // 인자 넘기기
+      return MaterialPageRoute(
+        builder: (context) => PassArgumentsScreen(
+          title: args.title,
+          message: args.message,
+        );
+      );
+    }
+  },
+);
+```
+
+- 위젯으로 이동하기
+
+```Dart
+Navigator.pushNamed(
+  context,
+  PassArgumentsScreen.routeName,
+  arguments: ScreenArguments(
+    'Accept Arguments Screen',
+    'This message is extracted in the onGenerateRoute function.',
+  ),
+);
 ```
