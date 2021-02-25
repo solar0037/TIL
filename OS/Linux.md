@@ -59,6 +59,14 @@ $ sudo pacman -S [package].pkg
 - Arch Wiki에 모든 과정에 링크를 달아놓는 등 위키 자체는 굉장히 친절하다.
 - 리눅스 개발 환경이 빨리 필요한 상황이라서 Manjaro 쓰기로 결정
 
+# Gentoo Linux
+
+## Grub2에서 듀얼부팅
+
+- `sys-boot/os-prober`를 이용해 grub 설정 시 다른 OS 감지
+- `/boot/grub/grub.cfg`의 `### BEGIN /etc/grub.d/30_os-prober ###` 구역에 Windows가 존재 -> 부팅 시 grub 메뉴에 뜸
+- [젠투 위키 참조](https://wiki.gentoo.org/wiki/GRUB2#os-prober_and_UEFI_in_chroot)
+
 # PlayOnLinux
 
 > - wine, PlayOnLinux
