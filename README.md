@@ -17,14 +17,8 @@
 
 ## Programming Paradigm
 
-- FP (Functional Programming)
-
-  - [파이썬](./Paradigm/FP/fp_python.md)
-  - [자바스크립트](./Paradigm/FP/fp_javascript.md)
-
-- OOP (Object Oriented Programming)
-
-  - [파이썬](./Paradigm/OOP/oop_python.md)
+- [Functional Programming](./Paradigm/FP.md)
+- [Object-Oriented Programming](./Paradigm/OOP.md)
 
 ## Design Pattern
 
@@ -33,22 +27,11 @@
 
 ## Language
 
-- Python
-
-  - [import](./Language/Python/import.md)
-
-- Ruby
-
-  - [설치](./Language/Ruby/install.md)
-  - [Bundler](./Language/Ruby/bundler.md)
-
-- Go
-
-  - [모듈](./Language/Go/module.md)
-  - [고루틴](./Language/Go/goroutine.md)
-
-- [PHP](./Language/php.md)
-- [인터프리터](./Language/interpreter.md)
+- [Python](./Language/Python.md)
+- [Ruby](./Language/Ruby.md)
+- [Go](./Language/Go.md)
+- [PHP](./Language/PHP.md)
+- [인터프리터](./Language/Interpreter.md)
 
 ## Library / Framework
 
@@ -80,9 +63,7 @@
 
 ## VCS
 
-- DVC
-
-  - [개녕](./VCS/DVC/concept.md)
+- [DVC](./VCS/DVC.md)
 
 ## DevOps
 
@@ -90,30 +71,14 @@
 
 ## OS
 
-- Linux
-
-  - [Arch Linux](./OS/Linux/arch_linux.md)
-  - [PlayOnLinux](./OS/Linux/playonlinux.md)
-  - [SSH](./OS/Linux/ssh.md)
-  - [셔뱅](./OS/Linux/shebang.md)
-  - [시작 스크립트](./OS/Linux/startup_script.md)
-
-- Windows
-
-  - [윈도우 파티션](./OS/Windows/windows_partition.md)
+- [Linux](./OS/Linux.md)
+- [Windows](./OS/Windows.md)
 
 ## Cloud
 
-- [AWS SageMaker](./Cloud/aws_sagemaker.md)
+- [AWS SageMaker](./Cloud/AWS_SageMaker.md)
 
 ## Editor
 
-- VSCode
-
-  - [설치](./Editor/VSCode/install.md)
-
-- Vim
-
-  - [플러그인](./Editor/Vim/plugin.md)
-  - [Neovim](./Editor/Vim/neovim.md)
-  - [커맨드라인](./Editor/Vim/cmdline.md)
+- [Visual Studio Code](./Editor/VSCode.md)
+- [Vim](./Editor/Vim.md)
